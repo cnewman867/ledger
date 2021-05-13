@@ -64,6 +64,7 @@ class Dashboard extends BaseController
 
     public function newtransaction(){
 
+        helper('form');
         $data = [
             'title' => 'Add new transaction',
             'meta_title' => 'New Transaction',
@@ -71,9 +72,20 @@ class Dashboard extends BaseController
 
         if($this->request->getMethod() =='post'){
             $model = new LedgerModel();
-            $_POST['user'] = session()->get('id');
 
-            $model->save($_POST);
+            $newData = $_POST;
+
+            $newData['user'] = $_SESSION['id'];
+            // print_r($user);
+            // exit();
+            // $_POST['user'] = $user;
+            // print_r($_POST);
+            // exit();
+
+            $model->save($newData);
+
+            // print_r($query);
+            // exit();
         }
         return view('new_transaction', $data);
     }

@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="">Amount</label>
-                <input id="" class="form-control" type="number" name="amount">
+                <input id="" class="form-control" type="number" step=0.01 name="amount">
             </div>
             <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="CR">

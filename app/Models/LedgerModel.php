@@ -14,7 +14,7 @@ class LedgerModel extends Model
     // protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['amount', 'description', 'credit', 'pay'];
+    protected $allowedFields = ['amount', 'description', 'type', 'pay', 'user'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'date_created';
