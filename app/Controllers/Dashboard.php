@@ -71,6 +71,7 @@ class Dashboard extends BaseController
 
         if($this->request->getMethod() =='post'){
             $model = new LedgerModel();
+            $_POST['user'] = session()->get('id');
 
             $model->save($_POST);
         }

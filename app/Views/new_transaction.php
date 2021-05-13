@@ -11,6 +11,18 @@
                 <input id="" class="form-control" type="" name="pay">
             </div>
             <div class="form-group">
+                <label for="">Amount</label>
+                <input id="" class="form-control" type="number" name="amount">
+            </div>
+            <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="CR">
+                  <label class="form-check-label" for="inlineRadio1">Deposit</label>
+            </div>
+            <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type" id="inlineRadio2" value="DR">
+                  <label class="form-check-label" for="inlineRadio2">Withdrawal</label>
+            </div>
+            <div class="form-group">
                 <label for="">Description</label>
                 <textarea id="" class="form-control" name="description" rows="3"></textarea>
             </div>

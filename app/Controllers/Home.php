@@ -10,16 +10,6 @@ class Home extends BaseController
 	{
 		return view('welcome_message');
 	}
-
-	function validation(){
-		$shop = new Shop();
-		echo $shop->product('laptop', '22') . '<br>';
-		
-		$adminshop = new AdminShop();
-		echo $adminshop->product('desktop', '77');
-	}
-
-
 }
 
 
