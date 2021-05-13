@@ -18,6 +18,9 @@ class Dashboard extends BaseController
         $userdetails = $model->getUserDetails($userid);
         $currentbalance = $model->getCurrentBalance($userid);
 
+        // print_r($transactions);
+        // exit();
+
         $data = [
             'title' => 'Ledger',
             'meta_title' => 'Ledger',
