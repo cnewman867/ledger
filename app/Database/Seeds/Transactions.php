@@ -29,7 +29,7 @@ class Transactions extends Seeder
             ],
             [
                 'user'          => 1,
-                'amount'        => '20.99',
+                'amount'        => '-20.99',
                 'description'   => 'Tangerine Dream CD for Chris',
                 'type'          => 'DR',
                 'pay'           => 'Amazon',
@@ -38,7 +38,7 @@ class Transactions extends Seeder
             ],
             [
                 'user'          => 1,
-                'amount'        => '75.68',
+                'amount'        => '-75.68',
                 'description'   => 'Plants',
                 'type'          => 'DR',
                 'pay'           => 'Sarah Raven',
@@ -47,7 +47,7 @@ class Transactions extends Seeder
             ],
             [
                 'user'          => 1,
-                'amount'        => '72.99',
+                'amount'        => '-72.99',
                 'description'   => 'Dog bed',
                 'type'          => 'DR',
                 'pay'           => 'Amazon',
