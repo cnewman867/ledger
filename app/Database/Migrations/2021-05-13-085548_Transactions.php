@@ -33,10 +33,10 @@ class Transactions extends Migration
             'pay' => [
                     'type'           => 'VARCHAR(55)',
             ],
-            'created_at' => [
+            'date_created' => [
                     'type'           => 'DATETIME',
             ],
-            'updated_at' => [
+            'date_updated' => [
                     'type'           => 'DATETIME',
             ],
         ]);

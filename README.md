@@ -64,3 +64,8 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 
 ## Instructions for setup
+
+-- Run setup.sh (this creates the schema 'ledger') or create the schema manually
+-- Run migrations - these create the 'users' and 'transactions' tables
+-- Run the seeds - these populate the 'users' and 'transaction' tables
+-- The user created is rick.deckard@sf.police with password saveTheOwls
