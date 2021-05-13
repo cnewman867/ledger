@@ -9,6 +9,7 @@ class Users extends Seeder
     public function run()
     {
             $data = [
+                [                    
                     'firstname'         => 'Rick',
                     'lastname'          => 'Deckard',
                     'email'             => 'rick.deckard@sf.police',
@@ -17,7 +18,7 @@ class Users extends Seeder
                     'user_updated_at'   => '2021-05-10 12:01:43',
                     'opening_balance'   => '2000',
                     'overdraft_limit'   => '250',
-                    'balance_alert'     => '4000',
+                    'balance_alert'     => '4000',]
             ];
 
             // Using Query Builder
