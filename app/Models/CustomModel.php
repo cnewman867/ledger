@@ -58,7 +58,12 @@ class CustomModel{
         return $result;
 
     }
+    function getCurrentOverdraft($userid){
+        $query = "select orverdraft from transactions where user = $userid";
+        $result = $this->db->query($query)->getResult();
+        return $result;
 
+    }
 
     // function join(){
     //     return $this->db->table('transactions')

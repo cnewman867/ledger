@@ -70,11 +70,12 @@ class Dashboard extends BaseController
             'amount' => 'required|min_length[1]|numeric',
             'type' => 'required',
             'description' => 'required|min_length[5]',
-
         ];
         $data = [
             'title' => 'Add new transaction',
             'meta_title' => 'New Transaction',
+            // 'balance' => balance,
+            // 'overdraft' => 
         ];
 
         if($this->request->getMethod() =='post'  && $this->validate($rules)) {

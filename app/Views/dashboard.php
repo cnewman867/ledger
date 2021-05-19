@@ -22,6 +22,11 @@
                             <td class="text-right"><?= number_to_currency(0, 'GBP', '',2)?></td>
                         <?php endif; ?>
                     </tr>
+                    <?php if (($userdetails->opening_balance + $currentbalance[0]->current + $userdetails->overdraft_limit) < -$userdetails->overdraft_limit) : ?>
+                        <tr>
+                            <td class="overdraft-used">WARNING! You have exceeded your overdraft limit!</td>
+                        </tr>
+                    <?php endif; ?>
                     <tr>
                         <td>Savings Threshold: </td>
                         <td class="text-right savings-threshold"> <?= number_to_currency($userdetails->balance_alert, 'GBP', '',2)?></td>
