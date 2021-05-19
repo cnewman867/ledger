@@ -65,12 +65,19 @@ class Dashboard extends BaseController
     public function newtransaction(){
 
         helper('form');
+        $rules = [
+            'pay' => 'required|min_length[3]',
+            'amount' => 'required|min_length[1]|numeric',
+            'type' => 'required',
+            'description' => 'required|min_length[5]',
+
+        ];
         $data = [
             'title' => 'Add new transaction',
             'meta_title' => 'New Transaction',
         ];
 
-        if($this->request->getMethod() =='post'){
+        if($this->request->getMethod() =='post'  && $this->validate($rules)) {
             $model = new LedgerModel();
 
             $newData = $_POST;
@@ -80,9 +87,11 @@ class Dashboard extends BaseController
                 $newData['amount'] = '-'.$newData['amount'];
             }
             $model->save($newData);
-
+            return redirect()->to('/');
             // print_r($query);
             // exit();
+        } else {
+            $data['validation'] = $this->validator;
         }
         return view('new_transaction', $data);
     }
