@@ -1,5 +1,5 @@
 body{
-    background-color: #e1e1e1;
+    background-color: #f0eaf7;
 }
 
 .form-wrapper{
@@ -35,4 +35,17 @@ body{
 /* Modify the backgorund color */
 .navbar-custom {
     background-color: #4575f3 !important;
+}
+
+/* Class for agreed overdraft */
+.agreed-overdraft {
+    color: #fc8d45 !important;
+}
+
+.savings-threshold {
+    color: #42c8b0 !important;
+}
+
+.table-custom {
+    background-color: #6933b0 !important;
 }

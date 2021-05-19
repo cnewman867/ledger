@@ -4,7 +4,7 @@
         <div class="col-12">
             <h1>Hello, <?= session()->get('firstname') ?></h1>
             <div class="row col-12 col-sm-4 float-right">
-                <table class="table table-dark">
+                <table class="table table-dark table-custom">
                   <tbody>
                     <tr>
                         <td>Account Balance: </td>
@@ -12,7 +12,7 @@
                     </tr>
                     <tr>
                         <td>Agreed Overdraft:</td>
-                        <td class="text-right"> <?= number_to_currency($userdetails->overdraft_limit, 'GBP', '',2)?></td>
+                        <td class="text-right agreed-overdraft"> <?= number_to_currency($userdetails->overdraft_limit, 'GBP', '',2)?></td>
                     </tr>
                     <tr>
                         <td>Overdraft Remaining: </td>
@@ -20,7 +20,7 @@
                     </tr>
                     <tr>
                         <td>Savings Threshold: </td>
-                        <td class="text-right"> <?= number_to_currency($userdetails->balance_alert, 'GBP', '',2)?></td>
+                        <td class="text-right savings-threshold"> <?= number_to_currency($userdetails->balance_alert, 'GBP', '',2)?></td>
                     </tr>
                   </tbody>
                 </table>
