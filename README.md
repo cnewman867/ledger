@@ -65,11 +65,11 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 ## Instructions for setup
 
--- Run setup.sh (this creates the schema 'ledger') or create the schema manually
--- Run migrations - these create the 'users' and 'transactions' tables (php spark migrate)
--- Run the seeds - these populate the 'users' and 'transaction' tables. ***NB*** run the Users seed before the Transactions as user id is a foregin key in transactions
--- The user created is rick.deckard@sf.police with password saveTheOwls
+- Run setup.sh (this creates the schema 'ledger') or create the schema manually
+- Run migrations - these create the 'users' and 'transactions' tables (php spark migrate)
+- Run the seeds - these populate the 'users' and 'transaction' tables. ***NB*** run the Users seed before the Transactions as user id is a foregin key in transactions
+- The user created is rick.deckard@sf.police with password saveTheOwls
 
 
 ## Notes
--- Colour palette taken from https://www.color-hex.com/color-palette/15911 (90's library)
+-- Colour palette taken from https://www.color-hex.com/olor-palette/15911 (90's library)
