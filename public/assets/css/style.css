@@ -31,3 +31,8 @@ body{
         margin : 0 auto;
     }
 }
+
+/* Modify the backgorund color */
+.navbar-custom {
+    background-color: #4575f3 !important;
+}
