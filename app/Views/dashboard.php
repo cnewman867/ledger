@@ -16,19 +16,11 @@
                     </tr>
                     <tr>
                         <td>Overdraft Used: </td>
-
-
-                            <?php if($userdetails->opening_balance + $currentbalance[0]->current < $userdetails->overdraft_limit) : ?>
-                                <td class="text-right overdraft-used"><?= number_to_currency($userdetails->opening_balance + $currentbalance[0]->current + $userdetails->overdraft_limit, 'GBP', '',2)?></td>
-
-                            <?php else : ?>
-
-                                <td class="text-right"><?= number_to_currency(0, 'GBP', '',2)?></td>
-                            <?php endif; ?>
-
-
-
-
+                        <?php if($userdetails->opening_balance + $currentbalance[0]->current < $userdetails->overdraft_limit) : ?>
+                            <td class="text-right overdraft-used"><?= number_to_currency($userdetails->opening_balance + $currentbalance[0]->current + $userdetails->overdraft_limit, 'GBP', '',2)?></td>
+                        <?php else : ?>
+                            <td class="text-right"><?= number_to_currency(0, 'GBP', '',2)?></td>
+                        <?php endif; ?>
                     </tr>
                     <tr>
                         <td>Savings Threshold: </td>
@@ -52,21 +44,17 @@
                     </tr>
                 </thead>
                 <tbody>
-
-
                     <?php foreach($transactions as $transaction) : ?>
 
                         <tr style="transform: rotate(0);">
                             <th scope="row"><a href='dashboard/transaction/<?= $transaction->id?>' class="stretched-link"><?= $transaction->id?></a></th>
                             <td><?= $transaction->pay?></td>
+                            <?php if($transaction->amount[0] == '-') {$transaction->amount = substr($transaction->amount, 1);} ?>
                             <td><?= number_to_currency($transaction->amount, 'GBP', '', 2)?></td>
                             <td><?= $transaction->type ?></td>
                             <td><?= $transaction->date_created?></td>
-
                         </tr>
-
                     <?php endforeach;?>
-
                 </tbody>
             </table>
         </div>

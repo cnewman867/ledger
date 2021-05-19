@@ -76,12 +76,9 @@ class Dashboard extends BaseController
             $newData = $_POST;
 
             $newData['user'] = $_SESSION['id'];
-            // print_r($user);
-            // exit();
-            // $_POST['user'] = $user;
-            // print_r($_POST);
-            // exit();
-
+            if($newData['type'] == 'DR') {
+                $newData['amount'] = '-'.$newData['amount'];
+            }
             $model->save($newData);
 
             // print_r($query);
