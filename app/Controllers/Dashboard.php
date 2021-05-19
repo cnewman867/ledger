@@ -88,8 +88,6 @@ class Dashboard extends BaseController
             }
             $model->save($newData);
             return redirect()->to('/');
-            // print_r($query);
-            // exit();
         } else {
             $data['validation'] = $this->validator;
         }
@@ -106,6 +104,14 @@ class Dashboard extends BaseController
     }
 
     public function update($id){
+        helper('form');
+        $rules = [
+            'pay' => 'required|min_length[3]',
+            'amount' => 'required|min_length[1]|numeric',
+            'type' => 'required',
+            'description' => 'required|min_length[5]',
+
+        ];
 
         $model= new LedgerModel();
         $transaction = $model->find($id);
@@ -115,16 +121,18 @@ class Dashboard extends BaseController
             'meta_title' => 'Update Transaction',
         ];
 
-        if($this->request->getMethod() =='post'){
+        if($this->request->getMethod() =='post' && $this->validate($rules)){
             $model = new LedgerModel();
             $_POST['id'] = $id;
-
             $model->save($_POST);
             $transaction = $model->find($id);
+            return redirect()->to('/');
+        } else{ 
+            $data['validation'] = $this->validator;   
+            $data['transaction'] = $transaction;
+            return view('update_transaction', $data);
         }
-        $data['transaction'] = $transaction;
 
-        return view('update_transaction', $data);
     }
 
 
