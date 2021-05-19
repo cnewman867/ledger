@@ -26,6 +26,11 @@
                         <td>Savings Threshold: </td>
                         <td class="text-right savings-threshold"> <?= number_to_currency($userdetails->balance_alert, 'GBP', '',2)?></td>
                     </tr>
+                    <?php if (($userdetails->opening_balance + $currentbalance[0]->current) > $userdetails->balance_alert) : ?>
+                        <tr>
+                            <td class="savings-threshold">Congratulations, you have reached your savings threshold</td>
+                        </tr>
+                    <?php endif; ?>
                   </tbody>
                 </table>
             </div>
