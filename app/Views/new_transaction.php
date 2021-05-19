@@ -11,7 +11,7 @@
                     <input id="" class="form-control" type="" name="pay">
                 </div>
                 <!-- <div class="form-group col-12 col-sm-3" > -->
-                    <div class="form-group" >
+                <div class="form-group" >
                     <label for="">Amount</label>
                     <input id="" class="form-control col-12 col-sm-3" type="number" step=0.01 name="amount">
                 </div>

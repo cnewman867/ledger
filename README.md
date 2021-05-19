@@ -69,3 +69,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 -- Run migrations - these create the 'users' and 'transactions' tables
 -- Run the seeds - these populate the 'users' and 'transaction' tables
 -- The user created is rick.deckard@sf.police with password saveTheOwls
+
+
+## Notes
+-- Colour palette taken from https://www.color-hex.com/color-palette/15911 (90's library)

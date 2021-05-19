@@ -38,7 +38,7 @@ body{
 }
 
 /* Class for agreed overdraft */
-.agreed-overdraft {
+.overdraft-used {
     color: #fc8d45 !important;
 }
 

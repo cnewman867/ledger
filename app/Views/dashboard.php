@@ -12,11 +12,23 @@
                     </tr>
                     <tr>
                         <td>Agreed Overdraft:</td>
-                        <td class="text-right agreed-overdraft"> <?= number_to_currency($userdetails->overdraft_limit, 'GBP', '',2)?></td>
+                        <td class="text-right"> <?= number_to_currency($userdetails->overdraft_limit, 'GBP', '',2)?></td>
                     </tr>
                     <tr>
-                        <td>Overdraft Remaining: </td>
-                        <td class="text-right"><?= number_to_currency($userdetails->opening_balance + $currentbalance[0]->current + $userdetails->overdraft_limit, 'GBP', '',2)?></td>
+                        <td>Overdraft Used: </td>
+
+
+                            <?php if($userdetails->opening_balance + $currentbalance[0]->current < $userdetails->overdraft_limit) : ?>
+                                <td class="text-right overdraft-used"><?= number_to_currency($userdetails->opening_balance + $currentbalance[0]->current + $userdetails->overdraft_limit, 'GBP', '',2)?></td>
+
+                            <?php else : ?>
+
+                                <td class="text-right"><?= number_to_currency(0, 'GBP', '',2)?></td>
+                            <?php endif; ?>
+
+
+
+
                     </tr>
                     <tr>
                         <td>Savings Threshold: </td>

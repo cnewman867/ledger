@@ -10,6 +10,19 @@
                 <label for="">To or From</label>
                 <input id="" class="form-control" type="" name="pay" value="<?= $transaction['pay']?>">
             </div>
+            <div class="form-group" >
+                <label for="">Amount</label>
+                <input id="" class="form-control col-12 col-sm-3" type="number" step=0.01 name="amount" value="<?= $transaction['amount']?>">
+            </div>
+            <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="CR">
+                  <label class="form-check-label" for="inlineRadio1">Deposit</label>
+            </div>
+            <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type" id="inlineRadio2" value="DR">
+                  <label class="form-check-label" for="inlineRadio2">Withdrawal</label>
+            </div>
+            <hr>
             <div class="form-group">
                 <label for="">Description</label>
                 <textarea id="" class="form-control" name="description" rows="3"><?= $transaction['description']?></textarea>
